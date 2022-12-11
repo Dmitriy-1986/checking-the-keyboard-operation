@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👍 Keydown</title>
+    <style>
+        * {box-sizing: border-box;font-family:'Courier New', Courier, monospace;font-size: 21px;}
+        body {background-color: #1e1e1e;}
+        #root {max-width: 1000px; margin: 0 auto; padding: 30px;}
+        h2 {font-size: 27px; color: #ce9178; margin-bottom: 0;}
+        .alert, .key {font-size: 16px; color: #ffce07;}
+        .enter-key {color: #3781d6;}
+    </style>
+    <link rel="icon" type="image/png" href="https://realfavicongenerator.net/homepage_icons/technologies/google-web-starter-kit.png">
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        document.querySelector('#root').innerHTML = '<h2>Проверка работы клавиатуры:</h2><br><span class=\'alert\'>Нажмите на клавишу!</span>';
+        document.addEventListener('keydown', function(e) {
+            document.querySelector('.alert').innerHTML = '';
+            document.querySelector('#root').innerHTML += '<span class=\'key\'>Клавиша: </span><span class=\'enter-key\'>"' + e.key + '"</span> ';
+        });
+    </script>
+</body>
+</html>
